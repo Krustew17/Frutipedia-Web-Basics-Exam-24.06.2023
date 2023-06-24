@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+
+    <main>
+
+        <!-- Create Profile Form -->
+        <section id="register">
+            <div class="form">
+                <h2>Create Profile</h2>
+                <form class="register-form" method="post" action="{% url 'create profile' %}">
+                    {{ form }}
+                    {% csrf_token %}
+{#                    <input#}
+{#                            type="text"#}
+{#                            name="first-name"#}
+{#                            id="first-name"#}
+{#                            placeholder="First Name"#}
+{#                    />#}
+{#                    <input#}
+{#                            type="text"#}
+{#                            name="last-name"#}
+{#                            id="last-name"#}
+{#                            placeholder="Last Name"#}
+{#                    />#}
+{#                    <input#}
+{#                            type="email"#}
+{#                            name="email"#}
+{#                            id="register-email"#}
+{#                            placeholder="Email"#}
+{#                    />#}
+{#                    <input#}
+{#                            type="password"#}
+{#                            name="password"#}
+{#                            id="register-password"#}
+{#                            placeholder="Password"#}
+{#                    />#}
+
+                    <button type="submit">Create</button>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+{% endblock %}
